@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>GUtils_DateTools</id>
+    <version>0.1.1.3</version>
+    <title>GUtils_DateTools</title>
+    <authors>shikeik</authors>
+    <owners>shikeik</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>icon.png</icon>
+    <readme>README.md</readme>
+    <description>时间日期相关简单工具集.</description>
+    <releaseNotes>这是一个测试版本2: 用于测试发布器发布.</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>Test</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2" />
+      <group targetFramework=".NETStandard2.1" />
+    </dependencies>
+  </metadata>
+</package>
