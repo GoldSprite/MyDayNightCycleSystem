@@ -2,7 +2,7 @@
   "name": "com.goldsprite.day_night_cycle_system",
   "displayName": "DayNightCycleSystem",
   "description": "昼夜循环系统!",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "unity": "2018.3",
   "license": "Apache-2.0", 
   "dependencies": {

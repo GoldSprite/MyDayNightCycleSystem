@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 namespace GoldSprite.UnityPlugins.DayNightCycleSystem {
     public class EnvironmentColor2D : MonoBehaviour {
@@ -18,12 +19,11 @@ namespace GoldSprite.UnityPlugins.DayNightCycleSystem {
 
         void Update()
         {
-            foreach(var render in cycleSpriteRenders) {
-                var color = render.color;
-                var lighting = lightManager.CurrentLighting;
-                color.r = color.g = color.b = lighting;
-                render.color = color;
-            }
+            ////受光照红蓝光影响物体 (效果不是很好)
+            //foreach (var render in cycleSpriteRenders) {
+            //    var color = lightManager.clightColor;
+            //    render.color = color;
+            //}
         }
     }
 }
