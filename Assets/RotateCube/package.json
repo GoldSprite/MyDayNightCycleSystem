@@ -1,0 +1,10 @@
+{
+  "name": "com.goldsprite.rotate_cube",
+  "displayName": "RotateCube",
+  "description": "Rotate the object!",
+  "version": "0.1.0",
+  "unity": "2018.3",
+  "license": "Apache-2.0",
+  "dependencies": {
+  }
+}
