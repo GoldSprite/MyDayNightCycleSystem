@@ -18,14 +18,14 @@ namespace GoldSprite.UnityPlugins.DayNightCycleSystem {
         [Tooltip("gameMinPerDay表示每现实时间{0}分钟为游戏内24h.")]
         public float gameMinPerDay = 5;
         [Range(0, 1)]
-        public float lightingRange_min = 0.2f;
+        public float lightingRange_min = 0.3f;
         [Range(0, 1)]
         public float lightingRange_max = 1;
         public bool manualMode;
         [Range(0, 24)]
         public float manualGameTimeHours;
-        public Color dayColor = Color.blue;
-        public Color nightColor = Color.red;
+        public Color dayColor = ColorTools.HexToColor("FFC2C2");
+        public Color nightColor = ColorTools.HexToColor("9999FF");
 
         [Header("实时")]
         public double SystemTimeSeconds;
@@ -107,6 +107,27 @@ namespace GoldSprite.UnityPlugins.DayNightCycleSystem {
             var range = lightingRange_max - lightingRange_min;
             var result = (float)(lightingRange_min + lighting * range);
             return result;
+        }
+    }
+
+
+    public class ColorTools
+    {
+        public static Color GetColorByHexString(string hexString)
+        {
+            ColorUtility.TryParseHtmlString(hexString, out var color);
+            return color;
+        }
+
+        public static Color HexToColor(string hex)
+        {
+            // 将十六进制字符串解析为红、绿、蓝三种颜色的值
+            float r = (float)System.Convert.ToInt32(hex.Substring(0, 2), 16) / 255f;
+            float g = (float)System.Convert.ToInt32(hex.Substring(2, 2), 16) / 255f;
+            float b = (float)System.Convert.ToInt32(hex.Substring(4, 2), 16) / 255f;
+
+            // 创建Color结构并返回
+            return new Color(r, g, b);
         }
     }
 
